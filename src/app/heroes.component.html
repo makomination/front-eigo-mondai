@@ -9,9 +9,12 @@
 </ul>
 
 <p *ngIf="heroes?.length > 3">There are many heroes!</p>
-
-<hero-detail [hero]="selectedHero"></hero-detail>
-
+<div *ngIf="selectedHero">
+    <h2>
+      {{selectedHero.name | uppercase}} is my hero
+    </h2>
+    <button (click)="gotoDetail()">View Details</button>
+</div>
 <h2>Here are some links to help you start: </h2>
 <ul>
   <li>
