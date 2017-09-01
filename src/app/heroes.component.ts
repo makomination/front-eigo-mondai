@@ -4,7 +4,7 @@ import { HeroService } from './hero.service';
 import { OnInit } from '@angular/core';
 
 @Component({
-  selector: 'my-heroes',
+  //selector: 'my-heroes',
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css']
 })
