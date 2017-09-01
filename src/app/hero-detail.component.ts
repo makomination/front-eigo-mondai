@@ -17,6 +17,7 @@ import { HeroService } from './hero.service';
       <label>name: </label>
       <input [(ngModel)]="hero.name" placeholder="name"/>
     </div>
+    <button (click)="goBack()">Back</button>
   </div>
   `
 })
@@ -40,5 +41,8 @@ export class HeroDetailComponent implements OnInit {
             }
           )
           .subscribe(hero => this.hero = hero);
+    }
+    goBack(): void {
+      this.location.back();
     }
 }
