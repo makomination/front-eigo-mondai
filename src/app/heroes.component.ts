@@ -35,6 +35,8 @@ export class HeroesComponent implements OnInit {
   }
 
   gotoDetail(): void {
-    this.router.navigate(['/detail', this.selectedHero.id]);
+    if(this.selectedHero){
+      this.router.navigate(['/detail', this.selectedHero.id]);
+    }
   }
 }
