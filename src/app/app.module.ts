@@ -25,8 +25,8 @@ import { HeroesComponent }     from './heroes.component';
   imports: [
     BrowserModule,
     FormsModule, // <-- import the FormsModule before binding with [(ngModel)]
-    InMemoryWebApiModule.forRoot(InMemoryDataService),    
     HttpModule,    
+    InMemoryWebApiModule.forRoot(InMemoryDataService, {passThruUnknownUrl: true}), 
     AppRoutingModule
   ],
   providers: [HeroService],
