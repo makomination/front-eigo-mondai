@@ -8,6 +8,7 @@ import { AppRoutingModule }     from './app-routing.module';
 import { HttpModule }    from '@angular/http';
 
 import { HeroService } from './hero.service';
+import { EigoMondaiService } from './eigo-mondai/eigo-mondai.service';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -18,6 +19,7 @@ import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroesComponent }     from './heroes.component';
 import {HeroSearchComponent} from './hero-search.component';
+import { EigoMondaiComponent } from './eigo-mondai/eigo-mondai.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import {HeroSearchComponent} from './hero-search.component';
     AppComponent,
     HeroDetailComponent,
     HeroesComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    EigoMondaiComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,7 @@ import {HeroSearchComponent} from './hero-search.component';
     InMemoryWebApiModule.forRoot(InMemoryDataService, {passThruUnknownUrl: true}), 
     AppRoutingModule
   ],
-  providers: [HeroService],
+  providers: [HeroService, EigoMondaiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
