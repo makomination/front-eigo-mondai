@@ -6,9 +6,15 @@ import { EigoMondai } from './eigo-mondai';
 export class EigoMondaiService {
 
   constructor() { }
-
   getEigoMondaiSet(): EigoMondai[] {
     return SAMPLE_MONDAI_SET;
   }
 
+  getEigoMondaiSetOnPage(pageNo: number, numOfMondaiPerPage: number): EigoMondai[] {
+    return SAMPLE_MONDAI_SET.filter(
+      eigoMondai => eigoMondai.no > numOfMondaiPerPage * (pageNo - 1) 
+              && eigoMondai.no <= numOfMondaiPerPage * pageNo
+    );
+  }
+  
 }

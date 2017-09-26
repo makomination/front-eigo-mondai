@@ -8,7 +8,7 @@ import { AppRoutingModule }     from './app-routing.module';
 import { HttpModule }    from '@angular/http';
 
 import { HeroService } from './hero.service';
-import { EigoMondaiService } from './eigo-mondai/eigo-mondai.service';
+import { EigoMondaiService } from './eigo-mondai.service';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
