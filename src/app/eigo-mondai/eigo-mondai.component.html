@@ -1,12 +1,24 @@
-<p>
-  英語問題集
-</p>
-<div *ngFor="let eigoMondai of eigoMondaiSet">
-  {{eigoMondai.no}}: {{eigoMondai.english}}
-  <br>
-  訳: {{eigoMondai.japanese}}
-  <br>
-  ノート: {{eigoMondai.note}}
-  <br>
-  <br>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p>英語問題集</p>
+    </div>
+  </div>
+</div>
+<div *ngFor="let eigoMondai of eigoMondaiSet" class="container mb-2">
+  <div class="row">
+    <div class="col">
+      {{eigoMondai.no}}: {{eigoMondai.english}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      訳: {{eigoMondai.japanese}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      ノート: {{eigoMondai.note}}
+    </div>
+  </div>     
 </div>
