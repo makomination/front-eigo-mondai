@@ -8,23 +8,23 @@
 <div *ngFor="let eigoMondai of eigoMondaiSet" class="container mb-2">
   <div class="row">
     <div class="col lead">
-      {{eigoMondai.no}}: {{eigoMondai.english}}
+      <strong>{{eigoMondai.no}}. </strong> {{eigoMondai.english}}
     </div>
   </div>
   <div class="row">
     <div class="col small">
-      訳: {{eigoMondai.japanese}}
+        <strong>訳:</strong> {{eigoMondai.japanese}}
     </div>
   </div>
   <div class="row">
     <div class="col small">
-      ノート: {{eigoMondai.note}}
+        <strong>ノート:</strong> {{eigoMondai.note}}
     </div>
   </div>     
 </div>
-<div class="container">
+<div class="container fixed-bottom mb-3 text-center">
   <div class="raw">
-      <button *ngIf="pageNo > 1" (click)="goBack()" class="mr-3 mt-3">Back</button>
+      <button *ngIf="pageNo > 1" (click)="goBack()" class="mr-3">Back</button>
       <button *ngIf="pageNo < numOfMondaiSet/numOfMondaiPerPage" (click)="goNext()">Next</button>
   </div>
 </div>
