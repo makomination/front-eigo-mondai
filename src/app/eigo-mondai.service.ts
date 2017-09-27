@@ -16,5 +16,9 @@ export class EigoMondaiService {
               && eigoMondai.no <= numOfMondaiPerPage * pageNo
     );
   }
+
+  getNumOfMondaiSet(): number {
+    return SAMPLE_MONDAI_SET.length
+  }
   
 }
