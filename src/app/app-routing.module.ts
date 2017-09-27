@@ -7,11 +7,11 @@ import { HeroDetailComponent }  from './hero-detail.component';
 import { EigoMondaiComponent } from './eigo-mondai/eigo-mondai.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/eigo-mondai', pathMatch: 'full' },
+  { path: '', redirectTo: '/eigo-mondai/1', pathMatch: 'full' },
   { path: 'dashboard',  component: DashboardComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'heroes',     component: HeroesComponent },
-  { path: 'eigo-mondai', component: EigoMondaiComponent }
+  { path: 'eigo-mondai/:pageNo', component: EigoMondaiComponent }
 ];
 
 @NgModule({
