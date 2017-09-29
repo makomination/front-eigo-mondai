@@ -14,10 +14,10 @@ import { EigoMondaiService } from  '../eigo-mondai.service';
 })
 export class EigoMondaiComponent implements OnInit {
 
-  numOfMondaiPerPage = 3;
+  numOfMondaiPerPage: number;
+  numOfMondaiSet: number;
   eigoMondaiSet: EigoMondai[];
   pageNo: number;
-  numOfMondaiSet: number;
   
   constructor(private eigoMondaiService: EigoMondaiService,
               private route: ActivatedRoute,
@@ -27,9 +27,10 @@ export class EigoMondaiComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       this.pageNo = params['pageNo'] as number;
-      this.eigoMondaiSet = this.eigoMondaiService.getEigoMondaiSetOnPage(this.pageNo, this.numOfMondaiPerPage)
+      this.eigoMondaiService.getEigoMondaiSetOnPage(this.pageNo).subscribe(eigoMondaiSet => this.eigoMondaiSet = eigoMondaiSet);
     });
-    this.numOfMondaiSet = this.eigoMondaiService.getNumOfMondaiSet();
+    this.eigoMondaiService.getMondaiSetInfo().subscribe(info => {this.numOfMondaiPerPage = info.numOfMondaiPerPage;this.numOfMondaiSet = info.numOfMondaiSet;});
+    
   }
   goBack() {
     let link = ['/eigo-mondai', +this.pageNo - 1];

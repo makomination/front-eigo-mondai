@@ -5,6 +5,7 @@
     </div>
   </div>
 </div>
+<div class="container mb-5">
 <div *ngFor="let eigoMondai of eigoMondaiSet" class="container mb-2">
   <div class="row">
     <div class="col lead">
@@ -22,7 +23,8 @@
     </div>
   </div>     
 </div>
-<div class="container fixed-bottom mb-3 text-center">
+</div>
+<div class="container fixed-bottom mb-2 text-center">
   <div class="raw">
       <button *ngIf="pageNo > 1" (click)="goBack()" class="mr-3">Back</button>
       <button *ngIf="pageNo < numOfMondaiSet/numOfMondaiPerPage" (click)="goNext()">Next</button>
