@@ -11,8 +11,6 @@ import { HeroService } from './hero.service';
 import { EigoMondaiService } from './eigo-mondai.service';
 
 // Imports for loading & configuring the in-memory web api
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
 
 import { DashboardComponent } from './dashboard.component'
 import { AppComponent } from './app.component';
@@ -34,7 +32,6 @@ import { EigoMondaiComponent } from './eigo-mondai/eigo-mondai.component';
     BrowserModule,
     FormsModule, // <-- import the FormsModule before binding with [(ngModel)]
     HttpModule,    
-    InMemoryWebApiModule.forRoot(InMemoryDataService, {passThruUnknownUrl: true}), 
     AppRoutingModule
   ],
   providers: [HeroService, EigoMondaiService],
