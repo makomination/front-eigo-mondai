@@ -1,6 +1,11 @@
-# AngularTourOfHeroes
+# Front-Eigo-Mondai
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.1.
+
+## How to run this project
+1. Clone this project to your local folder then run `npm i` in it.
+1. Run `ng serve`
+1. Access to `http://localhost:4200/eigo-mondai/1` on your browser.
 
 ## Development server
 
